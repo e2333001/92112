@@ -1,42 +1,33 @@
 # Welcome
 
-Welcome to your wiki! This is the default page we've installed for your convenience. Go ahead and edit it.
+## Install
 
-## Wiki features
+### Step 1
 
-This wiki uses the [Markdown](http://daringfireball.net/projects/markdown/) syntax. The [MarkDownDemo tutorial](https://bitbucket.org/tutorials/markdowndemo) shows how various elements are rendered. The [Bitbucket documentation](https://confluence.atlassian.com/x/FA4zDQ) has more information about using a wiki.
+下載後直接執行 script 腳本
 
-The wiki itself is actually a git repository, which means you can clone it, edit it locally/offline, add images or any other file type, and push it back to us. It will be live immediately.
+[主程式安裝腳本](https://gist.github.com/yagami-cerberus/325978e357dbab5be7b4c1f37f8ec9f7)
 
-Go ahead and try:
+### Step 2
 
-```
-$ git clone https://Yagami@bitbucket.org/Yagami/ukumpcore.git/wiki
-```
+[ukumpcore 設定檔範例](https://gist.github.com/yagami-cerberus/2739b5e855b49222d8d9fa303038328d)
 
-Wiki pages are normal files, with the .md extension. You can edit them locally, as well as creating new ones.
+請將設定檔放在 `/var/repository/ukumpcore/ukumpcore/settings.py`
 
-## Syntax highlighting
+### Step 3
 
-
-You can also highlight snippets of text (we use the excellent [Pygments][] library).
-
-[Pygments]: http://pygments.org/
-
-
-Here's an example of some Python code:
+準備資料庫
 
 ```
-#!python
+#!sh
+; 切換到 ukumpcore 工作目錄
+cd /var/repository/ukumpcore
 
-def wiki_rocks(text):
-    formatter = lambda t: "funky"+t
-    return formatter(text)
+; 建立快取資料庫 (只有在第一次安裝時需要)
+./manage.py createcachetable
+
+; 同步資料庫 schema
+./manage.py migrate
 ```
 
-
-You can check out the source of this page to see how that's done, and make sure to bookmark [the vast library of Pygment lexers][lexers], we accept the 'short name' or the 'mimetype' of anything in there.
-[lexers]: http://pygments.org/docs/lexers/
-
-
-Have fun!
+### Step 4
