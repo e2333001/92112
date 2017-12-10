@@ -31,3 +31,7 @@ cd /var/repository/ukumpcore
 ```
 
 ### Step 4
+
+[複製 uwsgi 設定檔](https://gist.github.com/yagami-cerberus/0fa6217215d33ab805c7c6a4bad96999)
+
+複製到 `/etc/uwsgi/apps-enabled/ukumpcore.xml`
