@@ -20,13 +20,13 @@
 
 ```
 #!sh
-; 切換到 ukumpcore 工作目錄
+# 切換到 ukumpcore 工作目錄
 cd /var/repository/ukumpcore
 
-; 建立快取資料庫 (只有在第一次安裝時需要)
+# 建立快取資料庫 (只有在第一次安裝時需要)
 ./manage.py createcachetable
 
-; 同步資料庫 schema
+# 同步資料庫 schema
 ./manage.py migrate
 ```
 
