@@ -12,6 +12,8 @@
 
 [ukumpcore 設定檔範例](https://gist.github.com/yagami-cerberus/2739b5e855b49222d8d9fa303038328d)
 
+Note: 100行以前不需要編輯，100行之後需逐行確認包含 資料庫設定，linebot 設定, crm 設定與 google doc 設定
+
 請將設定檔放在 `/var/repository/ukumpcore/ukumpcore/settings.py`
 
 ### Step 3
